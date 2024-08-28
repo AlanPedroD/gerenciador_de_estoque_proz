@@ -19,6 +19,12 @@ def adicionar_carro():
   nome = input("Qual o nome do carro a ser adicionado? ")
   carros.append(nome)
 
+def excluirCarro():
+  carroExcluir = input('Digite o carro que desaja excluir: ')
+  for carro in carros:
+     if(carro == carroExcluir):
+      carros.remove(carroExcluir)
+
 mensagem_inicial = '''
 Boas vindas ao sistema gerenciador de estoque!
 
@@ -46,5 +52,7 @@ while programa_em_execucao:
   elif opcao_usuario == "0":
     print("Até mais!")
     programa_em_execucao = False
+  elif opcao_usuario == "4":
+    excluirCarro()  
   else:
     print("Opção inválida")
